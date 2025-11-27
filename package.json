@@ -1,0 +1,27 @@
+{
+  "name": "multi-tool-scanner",
+  "version": "1.0.0",
+  "description": "Multi-tool security scanner integrating Semgrep and ESLint",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test-integration.js",
+    "test:semgrep": "node test-semgrep.js",
+    "scan:semgrep": "node scanners/semgrep-scanner.js",
+    "scan:snyk": "node scanners/snyk-scanner.js",
+    "scan:all": "node index.js",
+    "compare": "node comparison/analyzer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@octokit/rest": "^22.0.1",
+    "dotenv": "^17.2.3",
+    "eslint": "^9.39.1",
+    "eslint-plugin-no-unsanitized": "^4.1.4",
+    "eslint-plugin-security": "^3.0.1",
+    "mongoose": "^9.0.0"
+  }
+}
